@@ -41,10 +41,33 @@ public class Gyutan2025 extends HttpServlet {
 		
 		// 結果（スキーム）をコンソールとWebブラウザにひょうじ
 		System.out.println(detected);
-		response.getWriter().println(detected);
-		
-		
-	
-	}
+        String nextPage;
+
+        switch (detected) {
+            case "MENU":
+                nextPage = "/menu.jsp";
+                break;
+
+            case "SHOP":
+                nextPage = "/shop.jsp";
+                break;
+
+            case "HISTORY":
+                nextPage = "/history.jsp";
+                break;
+
+            case "ABOUT":
+                nextPage = "/about.jsp";
+                break;
+
+            default:
+                request.setAttribute("msg", "不明なコマンドです: " + detected);
+                nextPage = "/index.html"; 
+                break;
+        }
+
+        // JSP へ遷移（サーバー内で移動）
+        request.getRequestDispatcher(nextPage).forward(request, response);
+    }
 
 }

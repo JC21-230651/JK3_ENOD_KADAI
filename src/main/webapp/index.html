@@ -2,25 +2,47 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>Top Page</title>
+    <meta charset="UTF-8">
+    <title>牛タン韮塚のページ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<header>
-		<h1>牛タン○○のページ</h1>
-	</header>
-	<main>
-		<form method="post" action="tan">
-			<div class="question">
-				<p>質問を入力してください</p>
-				<p><input type="text" name="param"></p>
-			</div>
-			<div class="submit">
-				<button type="submit">送信</button>
-			</div>
-		</form>
-	</main>
-</body>
 
-</html>
+<header>
+    <h1>牛タン韮塚</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html" class="active">トップ</a></li>
+        <li><a href="menu.jsp">メニュー</a></li>
+        <li><a href="shop.jsp">通販</a></li>
+        <li><a href="history.jsp">歴史</a></li>
+        <li><a href="about.jsp">お店について</a></li>
+    </ul>
+</nav>
+
+<!-- 改良されたヒーローセクション -->
+<div class="hero">
+    <h2>炭火で味わう、至福の牛タン</h2>
+    <p>こだわりの「厚切り × 旨味 × 炭火焼き」をあなたへ。</p>
+</div>
+
+<main>
+    <h2>ご質問はこちら</h2>
+
+    <form method="post" action="tan">
+        <div class="question">
+            <p>質問を入力してください</p>
+            <p><input type="text" name="param"></p>
+        </div>
+        <div class="submit">
+            <button type="submit">送信</button>
+        </div>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2025 牛タン韮塚</p>
+</footer>
